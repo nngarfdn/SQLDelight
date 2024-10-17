@@ -1,0 +1,20 @@
+CREATE TABLE ExampleEntity (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL
+);
+
+insert:
+INSERT OR REPLACE INTO ExampleEntity(id, name)
+VALUES(?,?);
+
+getAll:
+SELECT * FROM ExampleEntity;
+
+update:
+UPDATE ExampleEntity
+SET name = ?
+WHERE id = ?;
+
+delete:
+DELETE FROM ExampleEntity
+WHERE id = ?;
